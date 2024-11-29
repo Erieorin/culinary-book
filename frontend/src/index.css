@@ -1,0 +1,384 @@
+/* Общие стили */
+body {
+  font-family: "DejaVu Sans Mono", sans-serif; /* Устанавливаем стильный шрифт */
+  margin: 0;
+  padding: 0;
+  background-color: #ffe6f0; /* Пастельный розовый цвет фона */
+  color: #333; /* Темный текст для контраста */
+
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Заголовок */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 2px solid #ffcce0;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 40px;
+  color: #ff6699; /* Яркий розовый */
+}
+
+header nav a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #ff6699;
+  font-weight: 500;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+  color: #cc3366; /* Темнее при наведении */
+}
+
+/* Карточка рецепта */
+.recipe-card {
+  display: flex; /* Выстраиваем элементы карточки в строку */
+  border: 1px solid #ffcce0;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.recipe-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.img-card {
+  width: 30%; /* Задаем ширину для изображения */
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 15px; /* Отступ справа */
+}
+
+.recipe-details h3 {
+  color: #ff6699;
+  margin: 10px 0;
+}
+
+.recipe-details p {
+  margin: 5px 0;
+  line-height: 1.6;
+  color: #666;
+}
+
+.recipe-details button,
+.recipe-details a {
+  margin-top: 10px; /* Отступ между кнопками */
+}
+
+/* Фильтры */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.filters select,
+.filters input {
+  font-family: "DejaVu Sans Mono", sans-serif; 
+  padding: 10px;
+  border: 1px solid #ffcce0;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+}
+
+.filters select:focus,
+.filters input:focus {
+  outline: none;
+  border-color: #ff6699;
+}
+
+/* Кнопки */
+button,
+.favorite-button,
+.delete-button,
+.edit-link,
+.detail-link {
+  font-family: "DejaVu Sans Mono", sans-serif; 
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s;
+
+}
+
+/* Кнопка "Применить фильтры" */
+button {
+  font-family: "DejaVu Sans Mono", sans-serif; 
+  background-color: #ff6699;
+  color: white;
+}
+
+button:hover {
+  background-color: #cc3366;
+}
+
+/* Кнопка "Добавить в избранное" */
+.favorite-button, 
+.edit-link,
+.delete-button,
+.detail-link{
+  background-color: #ffccdd;
+  color: #ff3366;
+  margin: 5px;
+}
+
+.favorite-button:hover {
+  background-color: #ff99bb;
+}
+
+.delete-button:hover {
+  background-color: #ff9999;
+}
+
+
+.edit-link:hover,
+.detail-link:hover {
+  color: #cc3366;
+}
+
+/* Улучшенный стиль списков */
+.recipe-page ul {
+  font-family: "DejaVu Sans Mono", sans-serif; 
+  list-style: none;
+  padding: 0;
+}
+
+.recipe-page ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.recipe-page ul li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #ff6699;
+  font-size: 16px;
+}
+
+.recipe-page select,
+.recipe-page input {
+  font-family: "DejaVu Sans Mono", sans-serif; 
+  padding: 10px;
+  border: 1px solid #ffcce0;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+}
+
+/* Подчеркиваем карточки при наведении */
+.recipe-card:hover {
+  border-color: #ff99bb;
+}
+
+.form label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.form input,
+.form textarea,
+.form select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: #4cae4c;
+}
+.steps .step {
+  margin-bottom: 15px;
+}
+
+.steps .step input[type="checkbox"] {
+  width: 15px; /* Увеличиваем размер чекбокса */
+  height: 15px;
+  accent-color: #ff6699; /* Цвет галочки */
+  margin-right: 10px;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.steps .step span {
+  vertical-align: middle;
+}
+
+.meal-planner {
+  display: flex;
+  gap: 20px;
+}
+
+.meal-options {
+  flex: 1;
+}
+
+.shopping-cart {
+  margin-top: 20px;
+}
+.react-calendar {
+  background-color: #f8f9fa; /* Светлый, но не белый фон */
+  color: #333; /* Тёмный цвет текста */
+  border: 1px solid #ddd; /* Тонкая граница */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.react-calendar__tile {
+  background: none;
+  color: #333; /* Цвет текста */
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.react-calendar__tile:hover {
+  background-color: #ececec; /* Лёгкий серый при наведении */
+}
+
+.react-calendar__tile--active {
+  background-color: #007bff; /* Активная дата */
+  color: white; /* Белый текст на активной дате */
+}
+
+.react-calendar__navigation {
+  background-color: #007bff; /* Навигационная панель */
+  color: white; /* Белый текст */
+  border-radius: 8px 8px 0 0;
+}
+
+.shopping-cart {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.shopping-cart h2 {
+  margin-bottom: 20px;
+}
+
+.shopping-cart ul {
+  list-style: none;
+  padding: 0;
+}
+
+.shopping-cart li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.shopping-cart button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.shopping-cart button:hover {
+  background-color: #0056b3;
+}
+
+/* Стили для слайдера */
+.slider {
+  position: relative;
+  max-width: 600px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.slider-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease-in-out;
+}
+
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Шаги рецепта */
+.steps {
+  margin-top: 20px;
+}
+
+.step {
+  margin-bottom: 10px;
+}
+
+.step label {
+  font-size: 16px;
+}
+
+/* Улучшение внешнего вида изображения */
+.slider-image {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease-in-out;
+}
